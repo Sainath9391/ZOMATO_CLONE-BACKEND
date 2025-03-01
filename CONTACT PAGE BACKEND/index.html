@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Food Delivery</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="contact-container">
+        <h2>📦 Contact Us</h2>
+        <p>Have an issue with your order? Let us know below!</p>
+
+        <form id="contactForm">
+            <div class="input-group">
+                <i class="fas fa-user"></i>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
+
+            <div class="input-group">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+            </div>
+
+            <div class="input-group">
+                <i class="fas fa-list"></i>
+                <select id="subject" name="subject" required>
+                    <option value="">Select Feedback Type</option>
+                    <option value="food">Food Quality</option>
+                    <option value="delivery">Delivery Process</option>
+                    <option value="behavior">Delivery Boy's Behavior</option>
+                    <option value="accuracy">Order Accuracy</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <p>Rate Your Experience:</p>
+            <div class="rating">
+                <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+                <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+                <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+                <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+                <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+            </div>
+
+            <div class="input-group">
+                <i class="fas fa-comment"></i>
+                <textarea id="message" name="message" placeholder="Additional Comments" rows="2" required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Send Feedback</button>
+        </form>
+    </div>
+
+    <div class="popup" id="popupBox">
+        <h3>✅ Thank You!</h3>
+        <p>Your feedback has been sent.</p>
+        <p id="ratingDisplay"></p>
+        <button onclick="closePopup()">OK</button>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

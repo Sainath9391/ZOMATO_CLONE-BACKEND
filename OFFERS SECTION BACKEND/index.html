@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festival Offers & Checkout</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Festival Offers Section -->
+    <div class="container" id="offers-section">
+        <h2>Exclusive Festival & Trending Offers 🎉</h2>
+        <div class="offer">
+            <div class="offer-details">
+                <p><strong>Diwali Special - Spice Paradise</strong></p>
+                <p class="discount">Flat 50% OFF on all orders above ₹500</p>
+            </div>
+            <button class="apply-btn" onclick="confirmOffer(50, 'Diwali Special')">Apply Offer</button>
+        </div>
+        <div class="offer">
+            <div class="offer-details">
+                <p><strong>Weekend Bonanza - Burger Bliss</strong></p>
+                <p class="discount">Extra ₹100 OFF on orders above ₹800</p>
+            </div>
+            <button class="apply-btn" onclick="confirmOffer(100, 'Weekend Bonanza')">Apply Offer</button>
+        </div>
+    </div>
+
+    <!-- Checkout Section -->
+    <div class="container" id="checkout-section" style="display:none;">
+        <h2>Complete Your Order</h2>
+
+        <!-- Step 1: Order Summary -->
+        <div class="step active" id="step1">
+            <h3>Order Summary</h3>
+            <p>Item: Spicy Pizza - ₹499</p>
+            <p id="discount-applied">Discount Applied: ₹0</p>
+            <p><strong>Total: ₹<span id="final-price">499</span></strong></p>
+            <button class="btn" onclick="nextStep(2)">Proceed to Delivery</button>
+        </div>
+
+        <!-- Step 2: Delivery Details -->
+        <div class="step" id="step2">
+            <h3>Delivery Details</h3>
+            <input type="text" placeholder="Full Name">
+            <input type="text" placeholder="Address">
+            <input type="text" placeholder="Phone Number">
+            <button class="btn" onclick="nextStep(3)">Proceed to Payment</button>
+        </div>
+
+        <!-- Step 3: Payment -->
+        <div class="step" id="step3">
+            <h3>Select Payment Method</h3>
+            <div class="payment-methods">
+                <div class="payment-method upi" onclick="showPaymentForm('upi-form')">UPI</div>
+                <div class="payment-method card" onclick="showPaymentForm('card-form')">Credit/Debit Card</div>
+                <div class="payment-method wallet" onclick="showPaymentForm('wallet-form')">Wallet</div>
+                <div class="payment-method cod" onclick="showPaymentForm('cod-form')">Cash on Delivery</div>
+            </div>
+
+            <div class="payment-form" id="upi-form">
+                <h3>Enter UPI Details</h3>
+                <input type="text" placeholder="Enter UPI ID (e.g., xyz@upi)">
+                <button class="btn" onclick="pay('UPI')">Pay Now</button>
+            </div>
+
+            <div class="payment-form" id="card-form">
+                <h3>Enter Card Details</h3>
+                <input type="text" placeholder="Card Number">
+                <input type="text" placeholder="Expiry Date (MM/YY)">
+                <input type="text" placeholder="CVV">
+                <button class="btn" onclick="pay('Card')">Pay Now</button>
+            </div>
+
+            <div class="payment-form" id="wallet-form">
+                <h3>Select Wallet & Enter Details</h3>
+                <select>
+                    <option>Paytm</option>
+                    <option>Amazon Pay</option>
+                    <option>PhonePe</option>
+                </select>
+                <input type="text" placeholder="Enter Wallet Mobile Number">
+                <button class="btn" onclick="pay('Wallet')">Pay Now</button>
+            </div>
+
+            <div class="payment-form" id="cod-form">
+                <h3>Confirm Cash on Delivery</h3>
+                <p>Payment will be collected at the time of delivery.</p>
+                <button class="btn" onclick="pay('COD')">Confirm Order</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

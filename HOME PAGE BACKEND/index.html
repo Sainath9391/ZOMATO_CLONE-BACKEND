@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomato Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <a href="#" class="logo">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwrjJkiThMRUBimD6t5zfkboDeOZQtMkd9Uw&s" alt="DeliverEase Logo">
+                DeliDash
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="restaurant registration/index.html">Add Restaurants</a></li>
+                    <li><a href="fetch_restaurents/index.html">Nearest Restaurants</a></li>
+                    <li><a href="offers section/index.html">Offers</a></li>
+                    <li><a href="contact page/index.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="search-container">
+                    <input type="search" placeholder="Search..." class="search-input">
+                    <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </div>
+                <a href="Cart section/index.html" class="cart-link">
+                    <div class="menu-btn-container">
+                        <button class="menu-btn">
+                            📜 Menu
+                        </button>
+                    </div>
+                    
+                </a>
+                
+                <a href="login-page/index.html" class="btn btn-primary">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Discover the best food & drinks in Your City</h1>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for restaurant, cuisine or a dish">
+                <button>Search</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="cuisines">
+        <h2>Popular Cuisines</h2>
+        <div class="cuisine-wrapper">
+            <button class="scroll-btn left-btn">&#10094;</button>  <!-- Left Scroll Button -->
+            <div class="cuisine-grid">
+                <div class="cuisine-item">
+                    <img src="home imgs/bonda.png" alt="Chaat">
+                   
+                </div>
+                <div class="cuisine-item">
+                    <img src="home imgs/dosa.png" alt="North Indian">
+                   
+                </div>
+                <div class="cuisine-item">
+                    <img src="home imgs/idli.png" alt="South Indian">
+                    
+                </div>
+                <div class="cuisine-item">
+                    <img src="home imgs/juice.png" alt="Pizza">
+                    
+                </div>
+                <div class="cuisine-item">
+                    <img src="home imgs/pancake.png" alt="Momos">
+                   
+                </div>
+                <div class="cuisine-item">
+                    <img src="home imgs/poha.png" alt="Burger">
+                    
+                </div>
+                <div class="cuisine-item">
+                    <img src="home imgs/poori.png" alt="Chaat">
+                   
+                </div>
+                <div class="cuisine-item">
+                    <img src="home imgs/vada.png" alt="North Indian">
+                   
+                </div>
+                <div class="cuisine-item">
+                    <img src="home imgs/paratha.png" alt="South Indian">
+                    
+                </div>
+            </div>
+            <button class="scroll-btn right-btn">&#10095;</button>  <!-- Right Scroll Button -->
+        </div>
+    </section>
+
+    <section class="restaurants">
+        <h2>Popular Restaurants</h2>
+        <div class="restaurant-grid">
+            <div class="restaurant-card">
+                <img src="home imgs/chinese.png" alt="Delicious Bites">
+                <div class="restaurant-info">
+                    <h3 class="restaurant-name">Delicious Bites</h3>
+                    <p class="restaurant-cuisine">North Indian, Chinese</p>
+                    <span class="restaurant-rating">⭐ 4.2</span><br>
+                    <button class="view-details" onclick="openModal('delicious-bites')">View Details</button>
+                </div>
+            </div>
+    
+            <div class="restaurant-card">
+                <img src="https://b.zmtcdn.com/data/pictures/chains/1/50691/92d9b4053ef0965120828b4fa4eecc3b_o2_featured_v2.jpg" alt="Spice Paradise">
+                <div class="restaurant-info">
+                    <h3 class="restaurant-name">Spice Paradise</h3>
+                    <p class="restaurant-cuisine">South Indian, Biryani</p>
+                    <span class="restaurant-rating">⭐ 4.5</span><br>
+                    <button class="view-details" onclick="openModal('Spice-paradise')">View Details</button>
+                </div>
+            </div>
+    
+            <div class="restaurant-card">
+                <img src="home imgs/piza.png" alt="Pizza Heaven">
+                <div class="restaurant-info">
+                    <h3 class="restaurant-name">Pizza Heaven</h3>
+                    <p class="restaurant-cuisine">Pizza, Italian</p>
+                    <span class="restaurant-rating">⭐ 4.0</span><br>
+                    <button class="view-details" onclick="openModal('piza-heaven')">View Details</button>
+                </div>
+            </div>
+    
+            <div class="restaurant-card">
+                <img src="home imgs/berger.png" alt="Burger Bliss">
+                <div class="restaurant-info">
+                    <h3 class="restaurant-name">Burger Bliss</h3>
+                    <p class="restaurant-cuisine">Burgers, Fast Food</p>
+                    <span class="restaurant-rating">⭐ 3.8</span><br>
+                    <button class="view-details" onclick="openModal('burger-bliss')">View Details</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="restaurant-locations">
+        <h2>Restaurant Locations</h2>
+        <div class="location-grid">
+    
+            <!-- 🌶️ Spice Paradise Location (Hyderabad) -->
+            <div class="location-card">
+                <h3>Spice Paradise</h3>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.5376651272054!2d78.40804507418746!3d17.432421788171137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb939adb8823e9%3A0x93e13fb8b1b61a8b!2sSpice%20Paradise%20Restaurant!5e0!3m2!1sen!2sin!4v1708348245000!5m2!1sen!2sin" 
+                    width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+    
+            <!-- 🍕 Pizza Heaven Location (Bangalore) -->
+            <div class="location-card">
+                <h3>Pizza Heaven</h3>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.712473893472!2d77.59084237504014!3d12.976660314822893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae176234fcfefd%3A0xb4e9d8a18e92f4b2!2sPizza%20Heaven!5e0!3m2!1sen!2sin!4v1708348385000!5m2!1sen!2sin" 
+                    width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+    
+            <!-- 🍽️ Delicious Bites Location (Mumbai) -->
+            <div class="location-card">
+                <h3>Delicious Bites</h3>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.624428455369!2d72.83683737511352!3d19.071272682128307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c998d1f0a8e9%3A0x7f3d9c6a818a21d6!2sDelicious%20Bites!5e0!3m2!1sen!2sin!4v1708348495000!5m2!1sen!2sin" 
+                    width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+    
+            <!-- 🍔 Burger Bliss Location (Delhi) -->
+            <div class="location-card">
+                <h3>Burger Bliss</h3>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.507289203951!2d77.21672127511452!3d28.613939282112175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd1a5d5c4b4d%3A0xabcdef1234567890!2sBurger%20Bliss!5e0!3m2!1sen!2sin!4v1708348600000!5m2!1sen!2sin"
+                    width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+    
+            <!-- 🍜 Noodle Hub Location (Chennai) -->
+            <div class="location-card">
+                <h3>Noodle Hub</h3>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3797.437762176139!2d80.2707185741974!3d13.082680788189226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52664b0f2c2e0f%3A0xabcdef9876543210!2sNoodle%20Hub!5e0!3m2!1sen!2sin!4v1708348720000!5m2!1sen!2sin"
+                    width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+    
+            <!-- 🍛 Curry House Location (Kolkata) -->
+            <div class="location-card">
+                <h3>Curry House</h3>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.3212131440546!2d88.36389247511132!3d22.572646682098683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0277795b5a5b6b%3A0xabcdef5678901234!2sCurry%20House!5e0!3m2!1sen!2sin!4v1708348800000!5m2!1sen!2sin"
+                    width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+    
+        </div>
+    </section>
+    
+    
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>About Zomato</h3>
+                <ul>
+                    <li><a href="#">Who We Are</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Work With Us</a></li>
+                    <li><a href="#">Investor Relations</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>For Restaurants</h3>
+                <ul>
+                    <li><a href="#">Partner With Us</a></li>
+                    <li><a href="#">Apps For You</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Learn More</h3>
+                <ul>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul>
+            </div>
+            <div class="footer-column social-links">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Zomato. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

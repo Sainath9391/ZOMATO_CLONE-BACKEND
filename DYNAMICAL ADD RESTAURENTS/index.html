@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div class="main-content">
+        <div class="card">
+            <h2 class="card-title">Add Restaurant</h2>
+            <form id="add-restaurant-form">
+                <input type="text" id="name" placeholder="Restaurant Name" required>
+                <input type="text" id="address" placeholder="Address" required>
+                <input type="url" id="website" placeholder="Website URL" required>
+                <button type="submit">Add Restaurant</button>
+            </form>
+        </div>
+
+        <div class="card">
+            <h2 class="card-title">All Restaurants</h2>
+            <button id="view-restaurants-btn">View All Restaurants</button>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Website</th>
+                    </tr>
+                </thead>
+                <tbody id="restaurants-table-body">
+                    <!-- Data will be inserted dynamically -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
